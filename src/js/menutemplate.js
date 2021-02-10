@@ -1,9 +1,4 @@
 "use strict";
-/*------------------------------------------------------------------------------
- *  Copyright (c) 2019 Sagar Gurtu
- *  Licensed under the MIT License.
- *  See License in the project root for license information.
- *----------------------------------------------------------------------------*/
 
 const { app, dialog } = require('electron');
 
@@ -56,6 +51,7 @@ exports.buildMenuTemplate = function (win) {
                 {
                     label: 'Close',
                     id: 'file-close',
+                    accelerator: 'CmdOrCtrl+w',
                     enabled: false,
                     click() {
                         win.webContents.send('file-close')
@@ -63,6 +59,7 @@ exports.buildMenuTemplate = function (win) {
                 },
                 {
                     label: 'Exit',
+                    accelerator: 'CmdOrCtrl+q',
                     click() {
                         app.quit()
                     }
