@@ -1,5 +1,4 @@
 "use strict";
-
 const {app, dialog} = require('electron');
 
 exports.buildMenuTemplate = function (win) {
